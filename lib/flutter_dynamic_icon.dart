@@ -24,7 +24,7 @@ class FlutterDynamicIcon {
   }
 
   /// Sets [iconName] as the current icon for the app.
-  /// Pass `null` to set the default icon. 
+  /// Pass `null` to set the default icon.
   ///
   /// [iOS]: Use [showAlert] at your own risk as it uses a private/undocumented API to
   /// not show the icon change alert. By default, it shows the alert

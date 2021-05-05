@@ -148,7 +148,7 @@ class _MyAppState extends State<MyApp> {
                   print(await FlutterDynamicIcon.supportsAlternateIcons);
                   if (await FlutterDynamicIcon.supportsAlternateIcons) {
                     await FlutterDynamicIcon.setAlternateIconName(
-                        "Alternative",
+                        "teamfortress",
                         showAlert: showAlert);
                     ScaffoldMessenger.of(context).hideCurrentSnackBar();
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
