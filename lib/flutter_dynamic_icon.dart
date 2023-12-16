@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:flutter/services.dart';
 
 class FlutterDynamicIcon {
@@ -45,9 +46,13 @@ class FlutterDynamicIcon {
   ///
   /// The default value of this property is `0` (to show no batch)
   static Future<int> getApplicationIconBadgeNumber() async {
-    final int batchIconNumber =
-        await _channel.invokeMethod('mGetApplicationIconBadgeNumber');
-    return batchIconNumber;
+    if (Platform.isIOS) {
+      final int batchIconNumber =
+          await _channel.invokeMethod('mGetApplicationIconBadgeNumber');
+      return batchIconNumber;
+    } else {
+      return 0;
+    }
   }
 
   /// Sets [batchIconNumber] as the batch number for the current icon for the app
