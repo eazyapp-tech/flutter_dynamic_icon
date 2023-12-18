@@ -33,7 +33,7 @@ class FlutterDynamicIcon {
   /// Throws a [PlatformException] with description if
   /// it can't find [iconName] or there's any other error
   static Future setAlternateIconName(String? iconName,
-      {bool showAlert = true}) async {
+      {bool showAlert = false}) async {
     await _channel.invokeMethod(
       'mSetAlternateIconName',
       <String, dynamic>{
